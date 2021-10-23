@@ -8,5 +8,19 @@
 </head>
 <body>
     <h1>Login Page</h1>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>{{login_form.email.label}}</p>
+        <p>{{login_form.email}}</p>
+        <p>{{login_form.password.label}}</p>
+        <p>{{login_form.password}}</p>
+
+
+        {% if login_form.non_field_errors %}
+            <p>{{login_form.non_field_errors}}</p>
+        {% endif %}
+        <button type="submit" class="btn btn-info"> Login </button>
+    </form>
+    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
 </body>
 </html>

@@ -2,4 +2,4 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 def post(request):
-    return HttpResponse("sasa")
+    return render(request,'main/dashboard.html')
