@@ -1,26 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Login Page</h1>
-    <form action="" method="POST">
-        {% csrf_token %}
-        <p>{{login_form.email.label}}</p>
-        <p>{{login_form.email}}</p>
-        <p>{{login_form.password.label}}</p>
-        <p>{{login_form.password}}</p>
-
-
-        {% if login_form.non_field_errors %}
-            <p>{{login_form.non_field_errors}}</p>
-        {% endif %}
-        <button type="submit" class="btn btn-info"> Login </button>
-    </form>
-    <p class="text-center">Don't have an account? <a href="/register">Create an account</a>.</p>
-</body>
-</html>
+{% extends 'base.html' %}
+{% load bootstrap5 %}
+{% load static %}
+{% block content %}
+<section id="cover" class="min-vh-100" style="background: #222 url('../../../static/img/auth/1.jpg');background-size: cover;">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row text-white">
+                <div  class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 mt-5">
+                    {% if login_form.non_field_errors %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="list-style-type: none;">
+                        <strong>Error!</strong> <span >{{login_form.non_field_errors}}</span> 
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                      </div>
+                    {% endif %}
+                    <div id="fomBg">
+                        <img id="logo" class="img-fluid" src='../../../static/img/auth/2.png' alt="logo">
+                        <h4 id="sign" class="display-4 py-2 text-truncate">Login </h4>
+                        <div class="px-2">
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="form-group">
+                                    <div class="inputs">
+                                        <label style="margin-right: 37px;">{{login_form.email.label}}</label>
+                                        {{login_form.email}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    
+                                    <div class="inputs">
+                                        <label>{{login_form.password.label}}</label>
+                                        {{login_form.password}}
+                                    </div>
+                                </div>                                
+                                <div class="form-group">
+                                    <button type="submit" class="btn btn-primary m-4" id="hyperBtn">Login</button>
+                                </div>
+                                <p id="sign2" class="text-center">Don't have an account?, <a href="{% url 'register' %}"
+                                    style="color: #ff5f13;">Create an account</a>.</p>                                    
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

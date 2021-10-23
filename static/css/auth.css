@@ -1,0 +1,43 @@
+#logo{
+    width: 150px;
+    height: auto;
+}
+#fomBg{
+    background-color: black;
+    padding: 20px;
+    border-radius: 8px;
+}
+.form-control {
+	min-height: 41px;
+	box-shadow: none;
+	border-color: #ddd;
+}
+
+label {
+	font-weight: normal;
+	font-size: 14px;
+    float: left;
+    text-transform: capitalize;
+}
+.signup-form input[type="checkbox"] {
+	margin-top: 6px;
+}    
+.inputs{
+    float: right;
+    padding: 10px;
+}
+.inputs label{
+    margin-right: 10px;
+}
+#sign{
+    font-family: 'Zen Antique Soft', serif;
+    /* color: #Fc68d0;*/
+    color: #ff5f13;
+}
+#sign2{
+    font-family: 'Titillium Web', sans-serif;
+}
+#cover{
+    background-position: center;
+    
+}

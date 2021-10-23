@@ -32,9 +32,9 @@ class MyUserManager(BaseUserManager):
         user.save(using=self._db)
         return user
 class MyUser(AbstractBaseUser):
-    email = models.EmailField(verbose_name="email_address", max_length=60, unique=True)
-    profession = models.CharField(verbose_name="profession", max_length=200,unique=True)
-    username = models.CharField(verbose_name="username", max_length=200)
+    email = models.EmailField(verbose_name="Email", max_length=60, unique=True)
+    profession = models.CharField(verbose_name="Profession", max_length=200,unique=True)
+    username = models.CharField(verbose_name="Username", max_length=200)
     date_joined = models.DateTimeField(auto_now_add=True)
     last_login = models.DateTimeField(auto_now=True)
     is_admin = models.BooleanField(default=False)
