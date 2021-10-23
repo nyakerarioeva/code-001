@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'authentication',
     'bootstrap5',
     'cloudinary',
+    'post',
 ]
 
 MIDDLEWARE = [
@@ -72,6 +73,15 @@ TEMPLATES = [
         },
     },
 ]
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mi_code',
+        'USER': 'hypertext',
+        'PASSWORD': 'assassin'
+    }
+}
+AUTH_USER_MODEL = "authentication.MyUser"
 
 WSGI_APPLICATION = 'project.wsgi.application'
 cloudinary.config( 
@@ -82,13 +92,6 @@ cloudinary.config(
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
 
 
 # Password validation

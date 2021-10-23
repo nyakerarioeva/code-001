@@ -5,14 +5,32 @@ from django.contrib.auth.models import  AbstractBaseUser, BaseUserManager
 # Create your models here.
 class MyUserManager(BaseUserManager):
     def create_user(self, email, profession,username,password=None):
-        
-        
         if not email:
             raise ValueError("email is required")
         if not profession:
             raise ValueError("Please provide your profession")
         if not username:
             raise ValueError("username is required")
+        user = self.model(
+            email=self.normalize_email(email),
+            profession = profession,
+            username = username
+        )
+        user.set_password(password)
+        user.save(using=self._db)
+        return user
+    def create_superuser(self, email, profession,username,password=None):
+        user = self.create_user(
+            email=self.normalize_email(email),
+            profession=profession,
+            username=username,
+            password=password,
+        )
+        user.is_admin = True
+        user.is_staff = True
+        user.is_superuser = True
+        user.save(using=self._db)
+        return user
 class MyUser(AbstractBaseUser):
     email = models.EmailField(verbose_name="email_address", max_length=60, unique=True)
     profession = models.CharField(verbose_name="profession", max_length=200,unique=True)
@@ -27,6 +45,8 @@ class MyUser(AbstractBaseUser):
     USERNAME_FIELD = 'email'
     
     REQUIRED_FIELDS = ['profession','username']
+    
+    objects = MyUserManager()
     
     def __str__(self):
         return str(self.username)
