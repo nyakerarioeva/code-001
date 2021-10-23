@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <p>{{request.user.profession}}</p>
+    <section>
+        <a href="{% url 'logout' %}" type="button" class="btn btn-success">Logout</a>
+        <p> <strong>Name</strong> {{request.user.username}}</p>
+        <p> <strong>Profession</strong> {{request.user.profession}}</p>
+        <p> <strong>Email</strong> {{request.user.email}}</p>
+    </section>
 </body>
 </html>
