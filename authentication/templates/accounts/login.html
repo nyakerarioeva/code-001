@@ -2,7 +2,64 @@
 {% load bootstrap5 %}
 {% load static %}
 {% block content %}
-<section id="cover" class="min-vh-100" style="background: #222 url('../../../static/img/auth/1.jpg');background-size: cover;">
+
+<section id="test" style="height: 100vh;">
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-md-6" style="background-color:#97B64D">
+                <div class="row">
+                    <div class="col-md-12  mx-auto text-center">
+                        <div class="h-icon">
+                            <p><i class="fas fa-align-center" style="color:white;font-size:50px"></i></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mx-auto text-center">
+                        <h2 class="text-head">Welcome to </br> <span class="heads">Dot</span>Snip</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12  mx-auto text-center">
+                        <div class="text-p">
+                            <p >
+                                Store frequently used content ie. code snippets, </p>
+                                <p>
+                                texts,content copies for easy access and copying in re-using.</p>
+                                Come and see the softer side of the future!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 mx-auto text-center">
+                        <img src='../../../static/img/1.png' class="img-fluid" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6" style="background-color:white">
+                <div class="row">
+                    <div class="col-md-12 mx-auto text-center">
+                        <img id="logo" class="img-fluid" src='../../../static/img/auth/2.png' alt="logo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4 id="sign">SIGN IN </h4>
+                        <p id="sign2">Don't have an account?, <a href="{% url 'register' %}"
+                            style="color: #ff5f13;">Register</a>.</p>  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+
+ 
+<!-- <section id="cover" class="min-vh-100" style="background: #222 url('../../../static/img/auth/1.jpg');background-size: cover;">
     <div id="cover-caption">
         <div class="container">
             <div class="row text-white">
@@ -44,5 +101,4 @@
             </div>
         </div>
     </div>
-</section>
-{% endblock %}
+</section> -->

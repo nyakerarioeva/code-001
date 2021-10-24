@@ -1,43 +1,89 @@
-#logo{
-    width: 150px;
-    height: auto;
+#logo {
+    Width: 143px;
+    Height: 123px;
+    margin-top: 40px;
 }
-#fomBg{
+
+#fomBg {
     background-color: black;
     padding: 20px;
     border-radius: 8px;
 }
+
 .form-control {
-	min-height: 41px;
-	box-shadow: none;
-	border-color: #ddd;
+    min-height: 41px;
+    box-shadow: none;
+    border-color: #ddd;
 }
 
 label {
-	font-weight: normal;
-	font-size: 14px;
+    font-weight: normal;
+    font-size: 14px;
     float: left;
     text-transform: capitalize;
 }
+
 .signup-form input[type="checkbox"] {
-	margin-top: 6px;
-}    
-.inputs{
+    margin-top: 6px;
+}
+
+.inputs {
     float: right;
     padding: 10px;
 }
-.inputs label{
+
+.inputs label {
     margin-right: 10px;
 }
-#sign{
-    font-family: 'Zen Antique Soft', serif;
-    /* color: #Fc68d0;*/
-    color: #ff5f13;
-}
-#sign2{
+
+#sign {
     font-family: 'Titillium Web', sans-serif;
+    /* color: #Fc68d0;*/
+    color: #17171F;
+    font-size: 26px;
+    padding-left: 50px;
+    font-weight: bold;
 }
-#cover{
+
+#sign2 {
+    font-family: 'Titillium Web', sans-serif;
+    padding-left: 50px;
+}
+
+#cover {
     background-position: center;
-    
+
+}
+
+.text-head {
+    color: #fff;
+    font-family: 'Titillium Web', sans-serif;
+    margin-top: 30px;
+    font-size: 37px;
+}
+
+.heads {
+    font-family: 'Zen Antique Soft', serif;
+}
+
+.text-p {
+    font-family: 'Abel', sans-serif;
+    color: #fff;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 300;
+    margin-top: 30px;
+}
+
+.start {
+    width: 100%;
+    ;
+}
+
+.right {
+    background-color: #FFFFFF;
+}
+.h-icon{
+    margin-top: 40px;
 }
