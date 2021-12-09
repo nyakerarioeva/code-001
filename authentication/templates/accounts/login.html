@@ -2,103 +2,54 @@
 {% load bootstrap5 %}
 {% load static %}
 {% block content %}
-
-<section id="test" style="height: 100vh;">
-    <div class="container-fluid px-0">
+<section class="login">
+    <div class="container-fluid">
         <div class="row">
-            <div class="col-md-6" style="background-color:#97B64D">
-                <div class="row">
-                    <div class="col-md-12  mx-auto text-center">
-                        <div class="h-icon">
-                            <p><i class="fas fa-align-center" style="color:white;font-size:50px"></i></p>
+            <div class="col-sm-6 colmd-6">
+                <div class="header mx-auto text-center">
+                    <h4>
+                        Customer <span class="br">Self Help Portal</span>
+                    </h4>
+                </div>
+                <div class="body">
+                    <h5 class="my-3">
+                        Login
+                    </h5>
+                    <p class="b-p">
+                        Hello, Welcome Back! You are clicks away from seeing our catalog or even creating a job ticket.
+                    </p>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <p><span>{{login_form.email.label}}</span></p>
+                                    <p><span>{{login_form.email}}</span></p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-3">
+                                    <p><span>{{login_form.password.label}}</span></p>
+                                    <p><span>{{login_form.password}}</span></p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12  mx-auto text-center">
-                        <h2 class="text-head">Welcome to </br> <span class="heads">Dot</span>Snip</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12  mx-auto text-center">
-                        <div class="text-p">
-                            <p >
-                                Store frequently used content ie. code snippets, </p>
-                                <p>
-                                texts,content copies for easy access and copying in re-using.</p>
-                                Come and see the softer side of the future!
-                            </p>
+                        <div class="form-group my-4">
+                            <button type="submit" class="btn btn-primary" id="hyperBtn">Login</button>
                         </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 mx-auto text-center">
-                        <img src='../../../static/img/1.png' class="img-fluid" alt="" srcset="">
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6" style="background-color:white">
-                <div class="row">
-                    <div class="col-md-12 mx-auto text-center">
-                        <img id="logo" class="img-fluid" src='../../../static/img/auth/2.png' alt="logo">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 id="sign">SIGN IN </h4>
                         <p id="sign2">Don't have an account?, <a href="{% url 'register' %}"
-                            style="color: #ff5f13;">Register</a>.</p>  
-                    </div>
+                                style="color: #ff5f13;">Create an account</a>.</p>
+                    </form>
                 </div>
             </div>
+            <div class="col-sm-6 col-md-6 c-right">
 
+            </div>
         </div>
     </div>
 </section>
 {% endblock %}
 
 
- 
-<!-- <section id="cover" class="min-vh-100" style="background: #222 url('../../../static/img/auth/1.jpg');background-size: cover;">
-    <div id="cover-caption">
-        <div class="container">
-            <div class="row text-white">
-                <div  class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4 mt-5">
-                    {% if login_form.non_field_errors %}
-                    <div class="alert alert-warning alert-dismissible fade show" role="alert" style="list-style-type: none;">
-                        <strong>Error!</strong> <span >{{login_form.non_field_errors}}</span> 
-                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-                      </div>
-                    {% endif %}
-                    <div id="fomBg">
-                        <img id="logo" class="img-fluid" src='../../../static/img/auth/2.png' alt="logo">
-                        <h4 id="sign" class="display-4 py-2 text-truncate">Login </h4>
-                        <div class="px-2">
-                            <form method="post">
-                                {% csrf_token %}
-                                <div class="form-group">
-                                    <div class="inputs">
-                                        <label style="margin-right: 37px;">{{login_form.email.label}}</label>
-                                        {{login_form.email}}
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    
-                                    <div class="inputs">
-                                        <label>{{login_form.password.label}}</label>
-                                        {{login_form.password}}
-                                    </div>
-                                </div>                                
-                                <div class="form-group">
-                                    <button type="submit" class="btn btn-primary m-4" id="hyperBtn">Login</button>
-                                </div>
-                                <p id="sign2" class="text-center">Don't have an account?, <a href="{% url 'register' %}"
-                                    style="color: #ff5f13;">Create an account</a>.</p>                                    
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section> -->
+
+<!--  -->

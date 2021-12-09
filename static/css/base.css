@@ -1,14 +1,16 @@
-#hyperBtn{
-    background-color: #ff5f13;
-    border-color: #ff5f13;
+#hyperBtn {
+    background-color: #16A085;
+    border-color: #16A085;
     color: #fff;
     font-family: 'Abel', sans-serif;
 
 }
-#hyperBtn:hover{
+
+#hyperBtn:hover {
     background-color: #a43c1c;
     border-color: #a43c1c;
 }
-.br{
-    color: #6495ED;
+
+.br {
+    color: #16A085;
 }

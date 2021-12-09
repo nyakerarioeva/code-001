@@ -1,7 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merriweather:wght@700&family=Patua+One&display=swap');
+
+:root {
+    --white: whitesmoke;
+    --green: #16A085;
+    --light-dark: #49494A;
+    --font1: 'Abel', sans-serif;
+    --font2: 'Merriweather', serif;
+    --font3: 'Patua One', cursive;
+    --normal-font-size: 1rem;
+    --header-font-size: 1.8rem;
+}
+
+.login {
+    background: var(--white);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.header h4 {
+    font-family: var(--font3);
+    margin-top: 3rem;
+    color: var(--light-dark);
+    font-size: var(--header-font-size);
+}
+
+.body {
+    padding: 50px;
+}
+
+.body h5 {
+    font-size: 1.6rem;
+    color: var(--light-dark);
+    font-family: var(--font3);
+}
+
+.b-p {
+    font-size: var(--normal-font-size);
+    color: black;
+    font-family: var(--font1);
+    padding-right: 120px;
+}
+
+.c-right {
+    min-height: 100vh;
+    background: url(../img/auth/3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.cards {
+    margin-top: 5rem;
+}
+
+.card1,
+.cards2 {
+    padding: 15px;
+    background: #8585E2;
+}
+
+.cards2,
+.card1:hover {
+    padding: 15px;
+    background: rgb(10, 209, 199)
+}
+
+.card-title h5 {
+    color: white;
+    font-family: var(--font3);
+}
+
+.card-body img {
+    width: 60%;
+}
+
+.brs {
+    color: #d83605;
+}
+
+.d-header {
+    margin-top: 80px;
+    color: white;
+    font-size: var(--header-font-size);
+}
+
+.l-left {
+    background: var(--green);
+}
+
 #logo {
     Width: 143px;
     Height: 123px;
     margin-top: 40px;
+}
+
+.brand {
+    margin-top: 100px;
+    color: var(--green);
+    font-size: var(--header-font-size);
 }
 
 #fomBg {
@@ -47,11 +143,10 @@ label {
 
 #sign2 {
     font-family: 'Titillium Web', sans-serif;
-    padding-left: 50px;
 }
 
 #cover {
-    background-position: center;
+    background: whitesmoke;
 
 }
 
@@ -84,6 +179,7 @@ label {
 .right {
     background-color: #FFFFFF;
 }
-.h-icon{
+
+.h-icon {
     margin-top: 40px;
 }
