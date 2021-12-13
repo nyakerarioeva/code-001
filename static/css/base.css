@@ -1,3 +1,8 @@
+:root {
+    --green: #16A085;
+    --brown: #a43c1c;
+}
+
 #hyperBtn {
     background-color: #16A085;
     border-color: #16A085;
@@ -13,4 +18,13 @@
 
 .br {
     color: #16A085;
+}
+
+.navbar {
+    background: whitesmoke;
+}
+
+#prs {
+    background: yellow;
+    max-height: 30vh;
 }

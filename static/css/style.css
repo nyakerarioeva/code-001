@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Merriweather:wght@700&family=Patua+One&display=swap');
+
+:root {
+    --white: whitesmoke;
+    --green: #16A085;
+    --light-dark: #49494A;
+    --font1: 'Abel', sans-serif;
+    --font2: 'Merriweather', serif;
+    --font3: 'Patua One', cursive;
+    --normal-font-size: 1rem;
+    --header-font-size: 1.8rem;
+}
+
+.navbars {
+    height: 120px;
+    width: 100%;
+    background: url(../img/auth/8.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#p-card {
+    background: var(--green);
+}
+
+#p-card img {
+    height: 150px;
+    width: 150px;
+}
+
+.card-title {
+    color: white;
+    font-family: var(--font3);
+    font-size: 1.3rem;
+}
+
+.card-text {
+    font-family: var(--font1);
+    color: #111;
+}
+
+.card-footer button {
+    background: #d83605;
+    font-family: var(--font1);
+    border-color: #d83605;
+}
+
+.modal-header {
+    background: var(--green);
+    color: #fff;
+    font-family: var(--font1);
+}
