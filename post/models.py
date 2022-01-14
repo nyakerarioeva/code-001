@@ -2,12 +2,11 @@ from django.db import models
 
 # Create your models here.
 
-class post(models.Model):
-    category = models.CharField(max_length=200)
+class Catalogue(models.Model):
     title = models.CharField(max_length=200)
-    content = models.TextField()
-    date = models.DateTimeField(auto_now_add=True)
-    links = models.CharField(max_length=1000)
     
     def __str__(self):
         return str(self.title)
+    
+class CustomerEntry(models.Model):
+    entry = models.ForeignKey(Catalogue, on_delete=models.CASCADE,related_name="entries" )

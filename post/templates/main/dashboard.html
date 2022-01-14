@@ -31,45 +31,26 @@
                 </div>
                 <div class="cards">
                     <div class="row">
-                        <div class="col-md-1">
-
-                        </div>
-                        <div class="col-md-5">
+                        {% for res in res %}
+                        <div class="col-md-4">
                             <div class="card mx-auto text-center card1 h-100">
                                 <div class="card-title mx-auto text-center">
                                     <h5>
-                                        Our Products
+                                        {{res.title}}
                                     </h5>
                                 </div>
                                 <div class="card-body">
                                     <img src="../../../static/img/2.png" class="img-fluid" alt="" srcset="">
                                     <div>
-                                        <a id="hyperBtn" href="{% url 'product' %}" type="button"
-                                            class="btn btn-success">Select Products <i
+                                        <a id="hyperBtn" href="{% url 'entry' res.id %}" type="button"
+                                            class="btn btn-success">Select {{res.title}} <i
                                                 class="fas fa-long-arrow-alt-right"></i></a>
                                     </div>
                                 </div>
 
                             </div>
                         </div>
-                        <div class="col-md-5">
-                            <div class="card mx-auto text-center cards2">
-                                <div class="card-title mx-auto text-center h-100">
-                                    <h5>
-                                        Our Services
-                                    </h5>
-                                </div>
-                                <div class="card-body">
-                                    <img src="../../../static/img/1.png" class="img-fluid" alt="" srcset="">
-                                    <div>
-                                        <button id="hyperBtn" type="submit" class="btn btn-success">Select Service <i
-                                                class="fas
-                                            fa-long-arrow-alt-right"></i></button>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
+                        {% endfor %}
                         <div class="col-md-1">
 
                         </div>
