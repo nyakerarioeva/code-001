@@ -7,8 +7,9 @@ def post(request):
     ctx = {"res":result}
     return render(request,'main/dashboard.html', ctx)
 def Entry(request,pk):
-    
-    return render(request, "entry.html")
+    result = Catalogue.objects.get(id=pk)
+    ctx = {"res":result}
+    return render(request, "entry.html", ctx)
         
 def product(request):
     return render(request, 'main/product.html')

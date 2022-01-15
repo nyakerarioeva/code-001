@@ -3,6 +3,12 @@
     --brown: #a43c1c;
 }
 
+body {
+    background: url(../img/hero/footer-bg.png);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 #hyperBtn {
     background-color: #16A085;
     border-color: #16A085;

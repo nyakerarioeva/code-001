@@ -52,3 +52,44 @@
     color: #fff;
     font-family: var(--font1);
 }
+
+.heros {
+    height: 70vh;
+    width: 100%;
+    background: url(../img/Entry/1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: -4rem;
+}
+
+.br {
+    color: #DE3163;
+}
+
+.e-text {
+    margin-top: 8rem;
+}
+
+.e-text h5 {
+    font-size: 3rem;
+    font-family: var(--font3);
+    color: var(--green);
+    font-weight: bold;
+}
+
+.e-text a {
+    border-radius: 10px;
+    font-family: var(--font1);
+    font-size: 1.3rem;
+}
+
+.e-row {
+    padding-top: 8rem;
+}
+
+.e-card img {
+    width: auto;
+    height: 200px;
+}

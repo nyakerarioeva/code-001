@@ -3,7 +3,7 @@
 {% load static %}
 {% block content %}
 <section class="entry">
-    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background: white;">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">CSHP</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -16,5 +16,56 @@
             </div>
         </div>
     </nav>
+</section>
+<section class="heros">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="e-text">
+                    <h5>
+                        Check out our <span class="br">{{res.title}}</span> Below!!!
+                    </h5>
+                    <a type="button" href="" class="btn btn-info my-3">Scroll Down <i class="las la-level-down-alt"
+                            style="color:red; font-size:1.5rem"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row my-3 pb-3 e-row">
+            <div class="col-md-4">
+                <div class="card h-100 e-card">
+                    <img src="../../static/img/1.png" class="card-img-top ing-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Product 1</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Request</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 e-card">
+                    <img src="../../static/img/1.png" class="card-img-top ing-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Product 2</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Request</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 e-card">
+                    <img src="../../static/img/1.png" class="card-img-top ing-fluid" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title text-dark">Product 3</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card's content.</p>
+                        <a href="#" class="btn btn-primary">Request</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 </section>
 {% endblock %}
