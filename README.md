@@ -3,7 +3,7 @@
 ## Project Description
 customer and payment data
 
-![views](static/img/screen.png)
+![views](static/img/screen.PNG)
 
 ### Live link
 Visit the application on https://still-bayou-87033.herokuapp.com/
